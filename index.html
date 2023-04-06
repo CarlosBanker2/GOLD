@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Notepad Website</title>
+    <title>GoldLeaf</title>
     <style>
       /* CSS styles for the text editor */
       textarea {
@@ -14,13 +14,13 @@
     </style>
   </head>
   <body>
-    <h1>Notepad Website</h1>
+    <h1>GOLDLEAF</h1>
     <textarea id="editor"></textarea>
     <button onclick="saveNote()">Save Note</button>
     <script>
       // JavaScript code for saving and retrieving notes
       const editor = document.getElementById('editor');
-      const note = localStorage.getItem('note');
+      const note = sessionStorage.getItem('note');
 
       if (note) {
         editor.value = note;
@@ -28,7 +28,7 @@
 
       function saveNote() {
         const text = editor.value;
-        localStorage.setItem('note', text);
+        sessionStorage.setItem('note', text);
         alert('Note saved successfully!');
       }
     </script>
